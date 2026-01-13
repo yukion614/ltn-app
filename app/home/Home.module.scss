@@ -1,0 +1,66 @@
+.content {
+  width: 100%;
+  margin: 15px auto 0;
+  padding: 0;
+  margin-top: 100px;
+
+  // background-color: aqua;
+  // height: 600px;
+}
+
+.first_part {
+  max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1%;
+  overflow: hidden;
+}
+
+.contentL {
+  width: calc(100% - 320px);
+  max-width: 940px;
+  margin: 0 auto;
+  float: left;
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+}
+
+.contentR {
+  width: 300px;
+  margin: 0 auto;
+  float: right;
+}
+
+/*  手機（< 600px） */
+@media (max-width: 600px) {
+  .contentL,
+  .contentR {
+    width: 100% !important;
+    max-width: none;
+    float: none;
+  }
+
+  .contentL {
+    .main {
+      flex-direction: column;
+    }
+  }
+}
+
+/* 平板（800–1023px） */
+@media (min-width: 800px) and (max-width: 1023px) {
+  .contentL,
+  .contentR {
+    width: 100% !important;
+    max-width: none;
+    float: none;
+  }
+}
+
+/* 桌機（≥ 1024px） */
+@media (min-width: 1024px) {
+}

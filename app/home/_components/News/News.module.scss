@@ -1,0 +1,108 @@
+.link {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .ph {
+    width: 35%;
+    height: 0;
+    background: url(https://www.ltn.com.tw/assets/images/default.png) no-repeat;
+    background-size: 100% auto;
+    padding: 0 0 22.5%;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .tit {
+    display: flex;
+    width: 65%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 0 10px;
+
+    p {
+      display: flex;
+      align-items: baseline;
+      margin: auto 0 0;
+    }
+    h3 {
+      font-size: 16px;
+    }
+
+    &:hover {
+      h3 {
+        color: #b03c3f;
+      }
+    }
+  }
+}
+
+.content_list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px 0;
+
+  li {
+    width: 50%;
+  }
+}
+
+.news10 {
+  width: 100%;
+  margin: 0 auto 30px;
+  overflow: hidden;
+  .caption {
+    display: none;
+    margin-bottom: 20px;
+    b {
+      font-size: 21px;
+      letter-spacing: 1px;
+      color: #b03c3f;
+      line-height: 1.5;
+    }
+  }
+}
+
+/*  手機（< 600px） */
+@media (max-width: 600px) {
+  .news10 {
+    .caption {
+      display: block;
+      border-bottom: 4px solid #b03c3f;
+
+      b {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .content_list {
+    li {
+      width: 100%;
+    }
+  }
+
+  .link {
+    .tit {
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* 平板（800–1023px） */
+@media (min-width: 800px) and (max-width: 1023px) {
+}
+
+/* 桌機（≥ 1024px） */
+@media (min-width: 1024px) {
+}

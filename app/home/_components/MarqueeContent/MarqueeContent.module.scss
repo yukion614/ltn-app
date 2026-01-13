@@ -1,0 +1,70 @@
+.marqueeContent {
+  display: block;
+  width: 99%;
+  overflow: hidden;
+  height: 50px;
+}
+
+.marquee {
+  display: none;
+  width: 100%;
+  height: var(--marqueeHeight);
+  padding-left: 30px;
+  margin-bottom: 12px;
+  float: left;
+  overflow: hidden;
+  background: url(https://cache.ltn.com.tw/images/icon/news2.png) no-repeat left
+    center / 28px;
+  position: relative;
+  z-index: 4;
+
+  .marqueebox {
+    flex: 1;
+    vertical-align: middle;
+    padding: 0 min(max(1%, 6px), 12px);
+
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        height: var(--marqueeHeight);
+        line-height: var(--marqueeHeight);
+        overflow: hidden;
+
+        a {
+          font-size: max(min(2vw, 22px), 20px);
+          font-weight: bold;
+          letter-spacing: 1px;
+          color: #bd0202;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          line-clamp: 1;
+
+          &:hover {
+            color: #800404;
+          }
+        }
+      }
+    }
+  }
+
+  .arrow {
+    width: 25px;
+    height: var(--marqueeHeight);
+    cursor: pointer;
+    transform: scaleY(0.8);
+
+    &:before {
+      content: "▼";
+      font-size: 16px;
+      color: #b03c3f;
+      line-height: var(--marqueeHeight);
+    }
+    &.up {
+      transform: scaleY(0.8) rotate(180deg);
+      margin: 0 12px;
+    }
+  }
+}

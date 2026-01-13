@@ -1,0 +1,87 @@
+// ol,
+// ul,
+// li {
+//   list-style: none;
+// }
+
+.top_keywords .top_ky_wrap {
+  line-height: 30px;
+  display: inline-block;
+}
+
+.top_keywords {
+  height: 40px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  overflow-x: overlay;
+  overflow-y: hidden;
+
+  .top_ky_wrap {
+    display: flex;
+    b {
+      font-weight: normal;
+      display: inline-block;
+      font-size: 17px;
+      color: #fff;
+      background-color: #e9ae2c;
+      margin-right: 12px;
+      padding: 3px 12px 0;
+      border-radius: 20px;
+      letter-spacing: 2px;
+      float: left;
+    }
+
+    ul {
+      li {
+        float: left;
+        border: 1px solid #bbb;
+        border-radius: 20px;
+        margin-right: 5px;
+        flex-shrink: 0;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+// .top_keywords ul li {
+//   float: left;
+//   border: 1px solid #d66900;
+//   border-radius: 20px;
+//   margin-right: 12px;
+//   flex-shrink: 0;
+// }
+
+// .top_keywords ul li {
+//   float: left;
+//   border: 1px solid #bbb;
+//   border-radius: 20px;
+//   margin-right: 5px;
+//   flex-shrink: 0;
+// }
+
+/*  手機（< 600px） */
+@media (max-width: 600px) {
+  // .header_kw {
+  //   display: none !important;
+  // }
+}
+
+/* 平板（800–1023px） */
+@media (min-width: 800px) and (max-width: 1023px) {
+  // .top_keywords {
+  //   display: block;
+  //   height: 32px;
+  //   overflow-x: overlay;
+  //   overflow-y: hidden;
+  //   margin: 10px 0 10px;
+  //   padding: 0 10px;
+  // }
+}
+
+/* 桌機（≥ 1024px） */
+@media (min-width: 1024px) {
+  .top_keywords {
+    display: none;
+  }
+}

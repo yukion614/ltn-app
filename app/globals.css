@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --textFontSize: 20px;
+  --textLineHeight: 1.7;
+  --textLetterSpacing: 1px;
+  --textMarginBottom: 30px;
+
+  --marqueeHeight: 40px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --textFontSize: 20px;
+    --textLineHeight: 1.7;
+    --textLetterSpacing: 1px;
+    --textMarginBottom: 30px;
+  }
+}
+
+body {
+  line-height: 1;
+  margin: 0px auto;
+  overflow: auto;
+  font-family: Arial, helvetica, "微軟正黑體", Geneva, "Heiti TC", "新細明體",
+    sans-serif;
+}
