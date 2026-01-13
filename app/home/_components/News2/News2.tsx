@@ -1,8 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import style from "./News2.module.scss";
+import { useSwiper_2 } from "@hooks/useSwiper_2";
 
 const Swiper_data = [
   {
@@ -11,6 +12,13 @@ const Swiper_data = [
       "https://video.ltn.com.tw/article/IsH310YKNDI/PLI7xntdRxhw03nlbog26AEgBkNoCHWcv-",
     title: "獨家專訪》來台證明台灣是獨立國家 石平：中國有本事就二次制裁",
     img_url: "https://img.ltn.com.tw/Upload/Module/5/63/4062543.jpg",
+  },
+  {
+    id: 2,
+    link_href:
+      "https://video.ltn.com.tw/article/3-b--MDTiBU/PLI7xntdRxhw03nlbog26AEgBkNoCHWcv-",
+    title: "美對台關稅15％、台積電再建5晶圓廠？政院：調降且不疊加已有大致共識",
+    img_url: "https://img.ltn.com.tw/Upload/Module/5/66/4065351.jpg",
   },
 ];
 interface Swiper_data {
@@ -49,29 +57,31 @@ interface SwiperProps {
 }
 function Swiper({ link_href, title, img_url, slide_index }: SwiperProps) {
   return (
-    <div className={style.swiperWrapper}>
-      <Link
-        href={link_href}
-        className="swiper-slide slideYouTube swiper-slide-duplicate"
-        data-desc={`P:4:${title}`}
-        title={title}
-        data-swiper-slide-index="4"
-        // style={{ width: "253px" }}
-      >
-        <div className={style.size}>
-          <Image src={img_url ? img_url : ""} alt={title} title={title} fill />
-        </div>
-        <h3 className={style.videoLiveTit}>
-          <b className={style.videoIcon}></b>
-          {title}
-        </h3>
-      </Link>
-    </div>
+    // <div className={style.swiperWrapper}>
+    <Link
+      href={link_href}
+      className={`${style["swiper-slide"]} slideYouTube swiper-slide-duplicate`}
+      data-desc={`P:4:${title}`}
+      title={title}
+      data-swiper-slide-index="4"
+      // style={{ width: "253px" }}
+    >
+      <div className={style.size}>
+        <Image src={img_url ? img_url : ""} alt={title} title={title} fill />
+      </div>
+      <h3 className={style.videoLiveTit}>
+        <b className={style.videoIcon}></b>
+        {title}
+      </h3>
+    </Link>
+    // </div>
   );
 }
 
 export default function News2() {
+  const swiper = useRef<HTMLDivElement>(null);
   const [data, setData] = useState<Swiper_data[]>(Swiper_data);
+  useSwiper_2(swiper);
   return (
     <>
       <div className={`${style.news2} boxTitle`} data-desc="首頁大圖右側">
@@ -81,52 +91,31 @@ export default function News2() {
         {/* <!-- 輪播區塊(5圖+5標+5連結)L77 --> */}
         <div className={`${style.box440} video_container`}>
           {/* <!-- 大圖右 1：輪播 --> */}
-          <div className={style["swiper-B"]}>
+          <div className={style["swiper-B"]} ref={swiper}>
             <div
+              id="swiperContainer"
               className={`${style.swiperContainer} ltn-swiper swiper-container-initialized swiper-container-horizontal`}
             >
-              {data &&
-                data.map((el, index) => {
-                  return (
-                    <Swiper
-                      key={index}
-                      link_href={el.link_href}
-                      title={el.title}
-                      img_url={el.img_url}
-                      slide_index={index}
-                    />
-                  );
-                })}
-
-              {/* <div
+              {/* 軌道 */}
+              <div
+                id="swiperWrapper"
                 className={style.swiperWrapper}
-                // style={{
-                //   transform: "translate3d(-506px, 0px, 0px)",
-                //   transitionDuration: "0ms",
-                // }}
+                // style={{ transform: "translateX(-10%)" }}
               >
-                <Link
-                  href="https://video.ltn.com.tw/article/IsH310YKNDI/PLI7xntdRxhw03nlbog26AEgBkNoCHWcv-"
-                  className="swiper-slide slideYouTube swiper-slide-duplicate"
-                  data-desc="P:4:獨家專訪》來台證明台灣是獨立國家 石平：中國有本事就二次制裁"
-                  title="獨家專訪》來台證明台灣是獨立國家 石平：中國有本事就二次制裁"
-                  data-swiper-slide-index="4"
-                  // style={{ width: "253px" }}
-                >
-                  <div className={style.size}>
-                    <Image
-                      src="https://img.ltn.com.tw/Upload/Module/5/63/4062543.jpg"
-                      alt="獨家專訪》來台證明台灣是獨立國家 石平：中國有本事就二次制裁"
-                      title="獨家專訪》來台證明台灣是獨立國家 石平：中國有本事就二次制裁"
-                      fill
-                    />
-                  </div>
-                  <h3 className={style.videoLiveTit}>
-                    <b className={style.videoIcon}></b>
-                    獨家專訪》來台證明台灣是獨立國家 石平：中國有本事就二次制裁
-                  </h3>
-                </Link>
-              </div> */}
+                {data &&
+                  data.map((el, index) => {
+                    return (
+                      <Swiper
+                        key={index}
+                        link_href={el.link_href}
+                        title={el.title}
+                        img_url={el.img_url}
+                        slide_index={index}
+                      />
+                    );
+                  })}
+              </div>
+
               <span
                 className="swiper-notification"
                 aria-live="assertive"
@@ -136,6 +125,7 @@ export default function News2() {
             {/* 按鈕 */}
             <div
               className={`${style.btnPrev}  ${style.boxInput} ${style["ltn - next"]} `}
+              // id="videoBtnPrev"
               id="videoBtnPrev"
               data-desc="向左鍵"
               tabIndex={0}
@@ -144,6 +134,7 @@ export default function News2() {
             ></div>
             <div
               className={`${style.btnNext}  ${style.boxInput} ${style["ltn - next"]} `}
+              // id="videoBtnNext"
               id="videoBtnNext"
               data-desc="向右鍵"
               tabIndex={0}
