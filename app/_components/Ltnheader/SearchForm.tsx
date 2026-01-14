@@ -1,7 +1,13 @@
 "use client";
 import style from "./Ltnheader.module.scss";
+import { useState } from "react";
 
 export default function SearchForm() {
+  const [input, setInput] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value);
+  };
   return (
     <div
       className={`${style.ltnsch_show} boxTitle boxText`}
@@ -14,6 +20,8 @@ export default function SearchForm() {
           id="cacheSearch"
           type="text"
           placeholder="Search..."
+          value={input}
+          onChange={handleChange}
         />
         <button
           type="submit"
