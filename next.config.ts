@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "cache.ltn.com.tw", // 補上這一個
+        hostname: "cache.ltn.com.tw",
         pathname: "/**",
       },
     ],
