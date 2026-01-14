@@ -21,7 +21,7 @@ export const useSwiper = (ref: React.RefObject<HTMLElement | null>) => {
     let requestID: number;
     let currentIndex = 0;
     let currentScroll = 0;
-    const speed = 20;
+    const speed = 40;
     let timeoutID: NodeJS.Timeout;
 
     // 複製第一個元素到items裡
