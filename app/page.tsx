@@ -1,9 +1,38 @@
-import Image from "next/image";
+import News from "./_components/News/News";
+import MarqueeContent from "./_components/MarqueeContent/MarqueeContent";
+import News2 from "./_components/News2/News2";
+import BreakingNews from "./_components/Breakingnews/page";
+import Swiper from "./_components/Swiper/Swiper";
+import WeekNews from "./_components/Weeknews/page";
+import Keyword from "./_components/Keyword/Keyword";
+import style from "./Home.module.scss";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start"></main>
+    <div className={style.content}>
+      <section className={style.first_part}>
+        {/* contentL */}
+        <div className={style.contentL}>
+          {/* 跑馬字幕 */}
+          <MarqueeContent></MarqueeContent>
+          {/* key_word */}
+          <Keyword />
+          <div className={style.main}>
+            {/* 首頁大圖 */}
+            <Swiper />
+            {/* news2 */}
+            <News2 />
+          </div>
+
+          {/* news */}
+          <News />
+        </div>
+        {/* contentR */}
+        <div className={style.contentR}>
+          <BreakingNews />
+          <WeekNews />
+        </div>
+      </section>
     </div>
   );
 }

@@ -1,5 +1,5 @@
-"use clinet";
-import { useState } from "react";
+// "use clinet";
+// import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import style from "./Weeknews.module.scss";
@@ -90,7 +90,8 @@ function ListItem({ title, href, time, img, category }: ListItemProps) {
 }
 
 export default function BreakingNews() {
-  const [data, setData] = useState<ListData[]>(listdata);
+  // const [data, setData] = useState<ListData[]>(listdata);
+  const data = listdata;
   return (
     <>
       <div

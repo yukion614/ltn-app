@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import style from "./Ltnheader.module.scss";
+import SearchForm from "./SearchForm";
 
 const top_keyword = [
   {
@@ -86,29 +87,7 @@ export default function Ltnheader() {
             })}
         </ul>
         {/* 展開搜尋 */}
-        <div
-          className={`${style.ltnsch_show} boxTitle boxText`}
-          title="搜尋"
-          data-desc="搜尋"
-        >
-          <form
-            action="https://search.ltn.com.tw/list"
-            method="get"
-            name="search"
-          >
-            <input
-              name="keyword"
-              id="cacheSearch"
-              type="text"
-              placeholder="Search..."
-            />
-            <button
-              type="submit"
-              data-desc="Search"
-              id="search_submit_btn"
-            ></button>
-          </form>
-        </div>
+        <SearchForm />
       </div>
 
       {/* <!-- Header 選單 --> */}
@@ -128,7 +107,8 @@ export default function Ltnheader() {
           <li>
             <Link
               title="熱門"
-              href="https://news.ltn.com.tw/list/breakingnews/popular"
+              href="/top"
+              // href="https://news.ltn.com.tw/list/breakingnews/popular"
               data-desc="熱門"
             >
               熱門
@@ -137,7 +117,8 @@ export default function Ltnheader() {
           <li>
             <Link
               title="政治"
-              href="https://news.ltn.com.tw/list/breakingnews/politics"
+              // href="https://news.ltn.com.tw/list/breakingnews/politics"
+              href="/politics"
               data-desc="政治"
             >
               政治
