@@ -20,8 +20,8 @@ export const useSwiper_2 = (ref: React.RefObject<HTMLElement | null>) => {
     let timeoutID: NodeJS.Timeout;
 
     // 2. 複製節點（處理無限輪播）
-    // 檢查是否已經複製過，避免重複 append
-    if (items.children.length > 0 && items.children.length === 2) {
+    // 超過2複製第一個到最後
+    if (items.children.length >= 2) {
       // 假設原始資料是 2 筆
       const cloneItem = items.firstChild?.cloneNode(true) as HTMLElement;
       items.appendChild(cloneItem);

@@ -3,7 +3,7 @@ import MarqueeContent from "./_components/MarqueeContent/MarqueeContent";
 import News2 from "./_components/News2/News2";
 import BreakingNews from "./_components/Breakingnews/page";
 import Swiper from "./_components/Swiper/Swiper";
-import WeekNews from "./_components/Weeknews/page";
+import WeekNews from "./_components/Weeknews/Weeknews";
 import Keyword from "./_components/Keyword/Keyword";
 import style from "./Home.module.scss";
 
