@@ -15,6 +15,11 @@ const nextConfig: NextConfig = {
         hostname: "cache.ltn.com.tw",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "pv6.ltn.com.tw",
+        pathname: "/**",
+      },
     ],
   },
 };
