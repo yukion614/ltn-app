@@ -1,6 +1,7 @@
 import Ltnheader from "./_components/Ltnheader/Ltnheader";
 import "./globals.css";
 import { Metadata } from "next";
+import Footer from "./_components/Footer/Footer";
 
 export const metadata: Metadata = {
   icons: {
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body>
         <Ltnheader />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
