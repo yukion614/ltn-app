@@ -9,7 +9,8 @@
 }
 
 .first_part {
-  max-width: 1260px;
+  // max-width: 1260px;
+  max-width: 1300px;
   width: 100%;
   margin: 0 auto;
   padding: 0 1%;
@@ -35,6 +36,10 @@
   float: right;
 }
 
+.right {
+  display: block;
+}
+
 /*  手機（< 600px） */
 @media (max-width: 600px) {
   .contentL,
@@ -48,6 +53,10 @@
     .main {
       flex-direction: column;
     }
+  }
+
+  .right {
+    display: none;
   }
 }
 

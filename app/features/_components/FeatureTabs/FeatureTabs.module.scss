@@ -1,0 +1,56 @@
+.projectSort {
+  display: flex;
+  height: 59px;
+  margin: 0px auto 20px;
+  padding: 10px 20px 0px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #dbe0e2;
+  border-bottom: 3px solid #999;
+
+  .caption {
+    width: 30%;
+    line-height: 35px;
+    margin: 0;
+
+    font-size: 26px;
+    height: 35px;
+    clear: both;
+    font-weight: bold;
+  }
+
+  a {
+    width: 30%;
+    height: 40px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #222;
+    font-family: "Noto Sans TC";
+    margin: 7px 15px 0px;
+    line-height: 38px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      color: #222;
+      background-color: #f8ce75;
+      transition: all 0.2s;
+    }
+
+    &.action {
+      background-color: #f1b533;
+    }
+  }
+}
+
+/*  手機（< 600px） */
+@media (max-width: 600px) {
+}
+
+/* 平板（800–1023px） */
+@media (min-width: 800px) and (max-width: 1023px) {
+}
+
+/* 桌機（≥ 1024px） */
+@media (min-width: 1024px) {
+}
