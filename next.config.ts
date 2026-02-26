@@ -6,6 +6,12 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "www.ltn.com.tw",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
         hostname: "img.ltn.com.tw",
         port: "",
         pathname: "/**", // 允許該網域下的所有路徑
