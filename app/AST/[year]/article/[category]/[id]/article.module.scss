@@ -1,0 +1,111 @@
+.whitecon {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  margin: 0px auto 30px;
+
+  h1 {
+    width: 85%;
+    font-size: 28px;
+    line-height: 35px;
+    padding: 0 0 10px;
+    margin: 30px auto 20px;
+    border: none;
+    border-bottom: 3px double #8c8b8b;
+    font-family:
+      Arial, "Noto Sans TC", "微軟正黑體", Geneva, "Heiti TC", "新細明體",
+      sans-serif;
+  }
+
+  .text {
+    width: 85%;
+    margin: 0px auto 20px;
+
+    .photo {
+      margin: 0px auto 20px;
+      width: 100%;
+      line-height: 0;
+      display: table;
+      caption-side: bottom;
+
+      p {
+        display: table-caption;
+        width: 100%;
+        background-color: #eaeaea;
+        color: #333;
+        font-size: 16px;
+        letter-spacing: 1px;
+        text-align: left;
+        padding: 7px 5px 8px 8px;
+        line-height: 20px;
+        margin: 1px 0 0;
+        border-top: 2px solid #fff;
+      }
+    }
+    p {
+      font-size: var(--textFontSize);
+      line-height: var(--textLineHeight);
+      letter-spacing: var(--textLetterSpacing);
+      text-align: justify;
+      text-justify: inter-ideograph;
+      margin-bottom: var(--textMarginBottom);
+    }
+    span.time {
+      font-size: 14px;
+      color: #767676;
+      margin: 15px 0px 7px;
+      display: block;
+    }
+
+    .appE1121 {
+      margin: 0;
+      a {
+        font-size: 20px;
+        color: #2554b2;
+      }
+    }
+  }
+}
+
+.function {
+  width: 85%;
+  height: 40px;
+  margin: 10px auto 5px;
+  a {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    margin-right: 5px;
+  }
+  .sharefb {
+    background: url(https://cache.ltn.com.tw/images/icon/innerPages_fb.svg)
+      center no-repeat;
+    background-size: 35px;
+  }
+
+  .sharetwitter {
+    background: url(https://cache.ltn.com.tw/images/icon/innerPages_X.svg)
+      center no-repeat;
+    background-size: 35px;
+  }
+
+  .shareline {
+    background: url(https://cache.ltn.com.tw/images/icon/innerPages_line.svg)
+      center no-repeat;
+    background-size: 35px;
+  }
+
+  .fontsize {
+    background: url(https://features.ltn.com.tw/assets/images/all/fontsize1.svg)
+      no-repeat;
+    background-size: 35px;
+    float: right;
+  }
+
+  .print {
+    background: url(https://features.ltn.com.tw/assets/images/all/print.svg)
+      no-repeat;
+    background-size: 35px;
+    float: right;
+  }
+}

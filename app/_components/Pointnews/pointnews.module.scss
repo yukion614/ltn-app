@@ -1,0 +1,51 @@
+.pointnews {
+  width: 300px;
+
+  background-color: #fff;
+  box-shadow: 0px 1px 5px #ddd;
+  margin: 15px 0px;
+  padding: 15px 15px 6px 15px;
+  counter-reset: num;
+
+  a {
+    display: block;
+    font-size: 16px;
+    color: #222;
+    margin: 12px 0;
+    padding: 0px 0px 0px 35px;
+    position: relative;
+
+    line-height: 1.3;
+
+    &:before {
+      content: counter(num) ". ";
+      counter-increment: num;
+      position: absolute;
+      left: 0;
+      top: 6px;
+      font-size: 25px;
+      color: #e8ae2b;
+      font-weight: bold;
+      font-style: italic;
+      font-family: Arial;
+    }
+
+    &:hover {
+      color: #777;
+    }
+  }
+}
+
+.boxTitle {
+}
+
+.w300_tit {
+  font-size: 20px;
+  color: #222;
+  font-weight: bold;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #aaa;
+}
+
+.JQellipsisD {
+}

@@ -1,0 +1,16 @@
+.breadcrumbs {
+  width: 100%;
+  padding: 10px 0px;
+  margin: 0 auto;
+  overflow: hidden;
+  clear: both;
+
+  a {
+    color: #111;
+    font-size: 16px;
+  }
+
+  span {
+    padding: 0 8px;
+  }
+}

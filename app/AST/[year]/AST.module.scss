@@ -1,0 +1,49 @@
+.content940 {
+  max-width: 940px;
+  width: 100%;
+  float: left;
+  margin: 0 auto;
+  overflow: hidden;
+  letter-spacing: 1px;
+}
+
+.right300 {
+  width: 300px;
+  float: right;
+}
+
+.whitecon {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  margin: 0px auto 30px;
+}
+
+.list {
+  padding: 20px;
+  margin: 0;
+}
+
+/*  手機（< 600px） */
+@media (max-width: 600px) {
+  .content940 {
+    max-width: none;
+    float: none;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .right300 {
+    display: none;
+  }
+}
+
+/* 平板（800–1023px） */
+@media (min-width: 800px) and (max-width: 1023px) {
+}
+
+/* 桌機（≥ 1024px） */
+@media (min-width: 1024px) {
+}

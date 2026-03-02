@@ -1,0 +1,64 @@
+.related {
+  display: flex;
+  overflow: auto;
+  padding: 2px 20px 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  li {
+    width: 48.5%;
+    border-bottom: #e0e0e0 solid 1px;
+    padding: 12px 5px;
+
+    a {
+      display: block;
+      width: calc(100% - 15px);
+      float: left;
+    }
+    .tit {
+      width: 100%;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 1.45;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      height: 50px;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    &:hover {
+      background-color: #f7f7f7;
+    }
+
+    &::before {
+      content: "";
+      background-color: #e8ae2b;
+      width: 4px;
+      height: 14px;
+      float: left;
+      margin: 5px 8px 5px 0px;
+    }
+  }
+}
+.caption {
+  width: 100%;
+  font-size: 26px;
+  height: 35px;
+  clear: both;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.ph {
+  display: none;
+}
+
+.whitecon {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  margin: 0px auto 30px;
+}
