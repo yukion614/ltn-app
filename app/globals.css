@@ -29,6 +29,145 @@ body {
   line-height: 1;
   margin: 0px auto;
   overflow: auto;
-  font-family: Arial, helvetica, "微軟正黑體", Geneva, "Heiti TC", "新細明體",
+  font-family:
+    Arial, helvetica, "微軟正黑體", Geneva, "Heiti TC", "新細明體", sans-serif;
+  font-weight: 700;
+}
+
+/* headings */
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+/*  */
+
+.content940 {
+  max-width: 940px;
+  width: 100%;
+  float: left;
+  margin: 0 auto;
+  overflow: hidden;
+  letter-spacing: 1px;
+}
+
+.content {
+  width: 100%;
+  margin: 15px auto 0;
+  padding: 0;
+  margin-top: 100px;
+}
+
+.right300 {
+  width: 300px;
+  float: right;
+}
+
+.right {
+  display: block;
+}
+
+.first_part {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1%;
+  overflow: hidden;
+}
+
+.date {
+  width: 300px;
+  height: 20px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.whitecon {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  margin: 0px auto 30px;
+}
+
+.whitecon h1 {
+  width: 85%;
+  font-size: 28px;
+  line-height: 35px;
+  padding: 0 0 10px;
+  margin: 30px auto 20px;
+  border: none;
+  border-bottom: 3px double #8c8b8b;
+  font-family:
+    Arial, "Noto Sans TC", "微軟正黑體", Geneva, "Heiti TC", "新細明體",
     sans-serif;
+}
+
+/* 分享列 */
+
+.function {
+  width: 85%;
+  height: 40px;
+  margin: 10px auto 5px;
+  a {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    margin-right: 5px;
+  }
+  .sharefb {
+    background: url(https://cache.ltn.com.tw/images/icon/innerPages_fb.svg)
+      center no-repeat;
+    background-size: 35px;
+  }
+
+  .sharetwitter {
+    background: url(https://cache.ltn.com.tw/images/icon/innerPages_X.svg)
+      center no-repeat;
+    background-size: 35px;
+  }
+
+  .shareline {
+    background: url(https://cache.ltn.com.tw/images/icon/innerPages_line.svg)
+      center no-repeat;
+    background-size: 35px;
+  }
+
+  .fontsize {
+    background: url(https://features.ltn.com.tw/assets/images/all/fontsize1.svg)
+      no-repeat;
+    background-size: 35px;
+    float: right;
+  }
+
+  .print {
+    background: url(https://features.ltn.com.tw/assets/images/all/print.svg)
+      no-repeat;
+    background-size: 35px;
+    float: right;
+  }
+}
+
+/* reset lists to remove default bullets site-wide */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*  手機（< 600px） */
+@media (max-width: 600px) {
+  .right {
+    display: none;
+  }
+}
+
+/* 平板（800–1023px） */
+@media (min-width: 800px) and (max-width: 1023px) {
+}
+
+/* 桌機（≥ 1024px） */
+@media (min-width: 1024px) {
 }

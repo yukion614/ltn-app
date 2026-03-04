@@ -1,0 +1,159 @@
+// .content940 {
+//   max-width: 940px;
+//   width: 100%;
+//   float: left;
+//   margin: 0 auto;
+//   overflow: hidden;
+//   letter-spacing: 1px;
+// }
+
+// .right300 {
+//   width: 300px;
+//   float: right;
+// }
+body {
+  background-color: #f7f7f7;
+  color: #111;
+  line-height: 1.3;
+}
+
+.springlist_topbox {
+  display: block;
+  margin-top: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.springlist_box {
+  border: none;
+  background-color: #98211b;
+
+  ul.list {
+    padding: 20px;
+    margin: 0;
+
+    width: 100%;
+
+    li {
+      width: 100%;
+      display: block;
+      margin: 0px auto 20px;
+      padding: 0px;
+      border-bottom: 1px solid #ddd;
+
+      a {
+        display: block;
+        background-color: #fff;
+        overflow: hidden;
+
+        .ph {
+          width: 100%;
+          max-width: 160px;
+          max-height: 100px;
+          float: left;
+          overflow: hidden;
+        }
+
+        .tit {
+          width: calc(100% - 160px);
+          float: right;
+          padding: 5px 5px 5px 15px;
+          color: #111;
+
+          span {
+            display: block;
+            font-size: 15px;
+            color: #816a3e;
+            line-height: 2;
+          }
+
+          h3 {
+            padding: 0px;
+            margin: 0;
+            font-size: 20px;
+            font-weight: normal;
+            line-height: 1.3;
+          }
+        }
+      }
+    }
+  }
+}
+
+.city_filter_box {
+  height: 50px;
+  background-color: #98211b;
+  margin: 0 !important;
+  padding: 8px 8px 0px 8px;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #f16363 #831510;
+}
+
+.newsSort {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #712020;
+  text-align: center;
+
+  li {
+    flex: 1;
+    border-right: 1px solid #d3a37b;
+    border-bottom: 1px solid #d3a37b;
+    border-left: none;
+
+    a {
+      display: block;
+      color: #fff;
+      line-height: 45px;
+      letter-spacing: 2px;
+      transition: 0.2s all;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.boxTitle {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 5px;
+
+  .city_btn {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 14px;
+    background: #eee;
+    color: #333;
+  }
+}
+
+/*  手機（< 600px） */
+@media (max-width: 600px) {
+  .content940 {
+    max-width: none;
+    float: none;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .right300 {
+    display: none;
+  }
+}
+
+/* 平板（800–1023px） */
+@media (min-width: 800px) and (max-width: 1023px) {
+}
+
+/* 桌機（≥ 1024px） */
+@media (min-width: 1024px) {
+}

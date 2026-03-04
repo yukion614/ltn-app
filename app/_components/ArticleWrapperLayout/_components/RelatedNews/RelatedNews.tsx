@@ -90,7 +90,7 @@ export default function RelatedNews({
   return (
     <>
       <div className={style.caption}>相關新聞</div>
-      <div className={style.whitecon}>
+      <div className="whitecon">
         <ul className={`${style.related} boxTitle`} data-desc="相關新聞">
           {relate_news &&
             relate_news.map((item) => (

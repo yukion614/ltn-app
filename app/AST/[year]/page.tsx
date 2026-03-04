@@ -2,7 +2,7 @@ import ListpageNewsCard from "../_components/ListpageNewsCard/ListpageNewsCard";
 import TopicLink from "../topicLink/TopicLink";
 import style from "./AST.module.scss";
 import Breadcrumbs from "@/app/_components/Breadcrumbs/Breadcrumbs";
-import Banner from "../_components/Banner/Banner";
+import Banner from "@/app/_components/Banner/Banner";
 
 const crumbs = [
   {
@@ -65,13 +65,14 @@ export default function ASTList() {
     <div>
       <Breadcrumbs items={crumbs} />
       <Banner
-        src="https://features.ltn.com.tw/assets/images/AST/features_2025.jpg"
+        image="https://features.ltn.com.tw/assets/images/AST/features_2025.jpg"
         alt="2025大學分科測驗"
         title="2025大學分科測驗"
+        url="http://localhost:3000/AST/2025"
       />
       <TopicLink items={topicData} />
 
-      <div className={`${style.whitecon} boxTitle`} data-desc="列表">
+      <div className="whitecon boxTitle" data-desc="列表">
         <ul className={`${style.list} listpage_news`}>
           {list.map((item) => (
             <ListpageNewsCard key={item.id} {...item} />

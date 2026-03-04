@@ -1,6 +1,6 @@
 import MainSectionWrapper from "@/app/_components/MainSectionWrapperLayout/MainSectionWrapperLayout";
 
-export default function FeatureLayout({
+export default function SpringLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

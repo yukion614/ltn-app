@@ -1,0 +1,41 @@
+.linkItem {
+  display: block;
+  width: 32%;
+  margin-bottom: 40px;
+  // margin-right: 2%;
+  line-height: 0;
+
+  .Topic {
+    height: 40px;
+    border-bottom: 4px solid #ddd;
+    position: relative;
+    h3 {
+      width: 100%;
+      font-size: 18px;
+      text-align: center;
+      line-height: 2.2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      height: 40px;
+      overflow: hidden;
+      font-weight: normal;
+      font-family: "微軟正黑體", "新細明體", sans-serif, Arial;
+    }
+  }
+}
+
+/*  手機（< 600px） */
+@media (max-width: 600px) {
+  .linkItem {
+    width: 100%;
+  }
+}
+
+/* 平板（800–1023px） */
+@media (min-width: 800px) and (max-width: 1023px) {
+}
+
+/* 桌機（≥ 1024px） */
+@media (min-width: 1024px) {
+}

@@ -1,0 +1,21 @@
+.photo {
+  margin: 0px auto 20px;
+  width: 100%;
+  line-height: 0;
+  display: table;
+  caption-side: bottom;
+
+  p {
+    display: table-caption;
+    width: 100%;
+    background-color: #eaeaea;
+    color: #333;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: left;
+    padding: 7px 5px 8px 8px;
+    line-height: 20px;
+    margin: 1px 0 0;
+    border-top: 2px solid #fff;
+  }
+}

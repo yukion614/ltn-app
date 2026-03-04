@@ -1,0 +1,105 @@
+.taiwanese {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 85%;
+  font-size: 30px;
+  line-height: 35px;
+  padding: 0 0 10px;
+  margin: 50px auto 20px;
+  border-bottom: 3px double #8c8b8b;
+  font-family:
+    "Tauhu Oo", Arial, "微軟正黑體", Geneva, "Heiti TC", "新細明體", sans-serif;
+}
+
+.text {
+  width: 85%;
+  margin: 0 auto 40px;
+
+  p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-family:
+      "Tauhu Oo", Arial, "微軟正黑體", Geneva, "Heiti TC", "新細明體",
+      sans-serif;
+  }
+
+  .synonyms {
+    margin-bottom: 40px;
+    p {
+      margin-bottom: 10px;
+
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .Tit {
+    color: #bc9861;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin: 20px auto;
+  }
+
+  .UseCases {
+    hr {
+      width: 100%;
+      height: 1px;
+      border: none;
+      border-bottom: 1px dashed #ccc;
+      background-color: transparent;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      font-family:
+        "Tauhu Oo", Arial, "微軟正黑體", Geneva, "Heiti TC", "新細明體",
+        sans-serif;
+    }
+
+    p.ch {
+      color: #666;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.voice {
+  width: 85%;
+  min-height: 50px;
+  margin: 10px auto;
+
+  .vBT {
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    background:
+      url(https://features.ltn.com.tw/assets/images/all/voice.png) no-repeat
+        center,
+      transparent;
+    background-size: 28px;
+  }
+}
+
+// .UseCases {
+//   hr {
+//     width: 100%;
+//     height: 1px;
+//     border: none;
+//     border-bottom: 1px dashed #ccc;
+//     background-color: transparent;
+//     margin-bottom: 15px;
+//   }
+
+//   p.ch {
+//     color: #666;
+//     margin-bottom: 10px;
+//   }
+// }

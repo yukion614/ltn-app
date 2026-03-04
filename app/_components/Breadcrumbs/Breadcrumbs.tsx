@@ -1,6 +1,6 @@
 import style from "./Breadcrumbs.module.scss";
 
-interface BreadcrumbItem {
+export interface BreadcrumbItem {
   cname: string;
   url: string;
 }
